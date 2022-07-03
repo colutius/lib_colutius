@@ -1,0 +1,13 @@
+[package]
+name = "lib_colutius"
+version = "0.1.0"
+edition = "2021"
+authors = ["ambition_echo <ambition_echo@outlook.com>"]
+description = "A IRC library for IRC client"
+readme = "README.md"
+repository = "https://github.com"
+license = "GPL-3.0-only"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
