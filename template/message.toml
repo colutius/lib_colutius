@@ -1,0 +1,19 @@
+[Type]
+#消息类型：未知/错误/加入/踢人/改名/通知/退出频道/Ping/退出客户端
+type = "Unknown/Error/Join/Kick/Nick/Notice/Part/Ping/Quit"
+
+[Who]
+on_server = "which server"#消息所在服务器
+#从哪来
+from_type = "Server/User/Me"#消息的发送方，只可能是服务器/用户/自己
+from_who ="name"
+#到哪去
+to_type = "Server/Channel/User/Me"#消息的接收方，可以是服务器/频道/用户/自己
+to_name = "name"
+
+[Main]
+raw_message = "balabala"#消息原始数据
+main_message = "hahahaha"#消息主体信息
+[Additional]
+my_nick = "hgy"
+time = 1656831141#消息发送时间，时间戳形式
