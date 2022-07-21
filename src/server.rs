@@ -1,26 +1,18 @@
 #![allow(dead_code)]
 #![allow(unused_variables)]
+#![allow(unused_imports)]
 use std::net::TcpStream;
 pub struct Server {
-    host: String,
-    port: String,
     nick: String,
     user: String,
+    stream: TcpStream,
 }
 impl Server {
-    pub fn new(host: String, port: String, nick: String, user: String) -> Server {
+    pub fn new(host: &str, port: &str, nick: &str, user: &str) -> Server {
         Server {
-            host,
-            port,
-            nick,
-            user,
+            nick: nick.to_string(),
+            user: user.to_string(),
+            stream: TcpStream::connect(format!("{}:{}", host, port)).expect("connect fail!"),
         }
-    }
-    pub fn connect(&self) {
-        let mut host = self.host.clone();
-        let port = self.port.clone();
-        host.push(':');
-        host.push_str(&port);
-        let stream = TcpStream::connect(host).expect("err");
     }
 }
