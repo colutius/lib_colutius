@@ -5,8 +5,10 @@ check:
     - rustc --version && cargo --version
     - cargo check
 test:
+  needs: ["check"]
   script:
     - cargo tests
 build:
+  needs: ["test"]
   script:
     - cargo build
