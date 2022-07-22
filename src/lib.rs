@@ -19,6 +19,5 @@ mod tests {
     #[test]
     fn test() {
         let _new_server = server::Server::new("irc.libera.chat", "6667", "hgy", "hgy");
-    
     }
 }
