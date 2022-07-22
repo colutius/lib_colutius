@@ -7,7 +7,7 @@ check:
 test:
   needs: ["check"]
   script:
-    - cargo tests
+    - cargo test
 build:
   needs: ["test"]
   script:
