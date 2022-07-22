@@ -1,0 +1,12 @@
+image: "rust:latest"
+
+check:
+  script:
+    - rustc --version && cargo --version
+    - cargo check
+test:
+  script:
+    - cargo tests
+build:
+  script:
+    - cargo build
